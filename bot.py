@@ -1,6 +1,7 @@
 import discord;
 import csv;
 from discord.ext import commands;
+from discord.ext.commands import Bot;
 from discord.utils import get;
 
 ADMIN_ROLE_NAME="Admins";
@@ -10,7 +11,7 @@ TOKEN = "";
 with open('discord_token') as f:
 	TOKEN=f.read();
 
-bot = commands.Bot(command_prefix=">");
+bot = Bot(command_prefix=">");
 
 def load_roles(server_name:str):
 	try:
